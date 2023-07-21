@@ -14,18 +14,19 @@ public class TwoSum {
 
     private static int[] twoSum(int[] nums, int target) {
 
-        List<Integer> set = new ArrayList<>();
+        HashSet<Integer> set = new HashSet<>();
         for (int n :
                 nums) {
             set.add(n);
         }
-        for (int i = 0; i < nums.length; i++) {
-            if (set.contains(target - nums[i])) {
-                if (i != set.indexOf(target - nums[i]))
-                    return new int[]{i, set.indexOf(target - nums[i])};
-
+        for(int n : set){
+            int m = target - n;
+            if(set.contains(m)){
+                return new int[]{n,m};
             }
         }
+
+
         return new int[]{};
     }
 }
