@@ -25,12 +25,15 @@ public class DeleteNodeWithoutHead {
 
     }
 
+    //Copy the value of next Node and its reference too 
+    //Time : O(1)
     private static void deleteNode(Node node) {
           node.val = node.next.val;
           node.next = node.next.next;
 
     }
 
+    //Time : O(N)
     private static void displayNode() {
         Node n = head;
         while (n != null)
