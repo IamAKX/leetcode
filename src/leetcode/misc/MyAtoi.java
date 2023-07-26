@@ -1,4 +1,4 @@
-package interview;
+package leetcode.misc;
 
 public class MyAtoi {
 
