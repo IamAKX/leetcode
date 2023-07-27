@@ -1,8 +1,6 @@
 package leetcode.array;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 
 public class TwoSum {
     public static void main(String[] args) {
@@ -17,12 +15,12 @@ public class TwoSum {
         HashSet<Integer> set = new HashSet<>();
         for (int n :
                 nums) {
-            set.add(n);
+            set.add(n); //add all numbers to HashSet
         }
         for(int n : set){
             int m = target - n;
             if(set.contains(m)){
-                return new int[]{n,m};
+                return new int[]{n,m}; // return both the elements in a new array
             }
         }
 

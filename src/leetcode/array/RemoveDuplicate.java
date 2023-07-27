@@ -4,14 +4,14 @@ public class RemoveDuplicate {
     public static void main(String[] args) {
         int[] nums = {1,1,2,3,3,3,3,4,4,5,5,6,6,6,7,7};
         int n = removeDuplicates(nums);
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) { //print till j index returned
             System.out.print(nums[i]+"\t");
         }
     }
 
     private static int removeDuplicates(int[] nums) {
         int n = nums.length;
-        if (n == 0 || n == 1)
+        if (n == 0 || n == 1) // no or one element - there can be no duplicates
             return n;
         int[] ar = new int[n];
         int j = 0;
@@ -23,13 +23,13 @@ public class RemoveDuplicate {
             }
         }
 
-        ar[j] = nums[n-1];
+        ar[j] = nums[n-1]; //for the last element
         j++;
 
         for (int i = 0; i < j; i++) {
             nums[i] = ar[i];
         }
 
-        return j;
+        return j; // index of last element
     }
 }

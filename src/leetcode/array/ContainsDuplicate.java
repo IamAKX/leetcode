@@ -9,6 +9,7 @@ public class ContainsDuplicate {
         boolean b = containsDuplicate(arr);
         System.out.print(b);
     }
+    //Check and push all elements into the HashMap if frequency=1, else return duplicate=true
     public static boolean containsDuplicate(int[] nums) {
         HashMap<Integer,Integer> frequency = new HashMap<Integer,Integer>();
         for (int n:
@@ -17,15 +18,16 @@ public class ContainsDuplicate {
                 frequency.put(n,1);
             }
             else {
-                frequency.put(n, frequency.get(n)+1);
+                //frequency.put(n, frequency.get(n)+1);
+            	return true;
             }
         }
-        boolean res = false;
-        for(Integer n : frequency.values()){
-            if(n>1)
-                res=true;
-        }
+//        boolean res = false;
+//        for(Integer n : frequency.values()){
+//            if(n>1)
+//                res=true;
+//        }
 
-        return  res;
+        return  false;
     }
 }
